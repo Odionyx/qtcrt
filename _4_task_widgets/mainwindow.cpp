@@ -10,9 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     /* Name */
     ui->radioButton->setText("Вкл.");
     ui->radioButton_2 ->setText("Выкл.");
-    ui->pushButton->setText("Выполнить");
     ui->groupBox->setTitle("Соединение");
-    ui->groupBox_2->setTitle("Таблица");
 
     /* drop list */
     ui->comboBox->addItem("Создать");
@@ -22,8 +20,17 @@ MainWindow::MainWindow(QWidget *parent)
     ui->comboBox->addItem("Удалить столбец");
     ui->comboBox->addItem("Удалить");
 
-    /*  */
-    ui->pushButton->setChecked(false);
+    // Create the button, make "this" the parent
+    m_button = new QPushButton("Выполнить", this);
+    // set size and location of the button
+    m_button->setGeometry(QRect(QPoint(10, 10), QSize(200, 50)));
+//    m_button->setChecked(true);
+
+    //Ещё не разобрался как кнопку в другое место экрана поставить
+    //Connect button for main
+    setMenuWidget(m_button);
+    // Connect button signal to appropriate slot
+    connect(m_button, &QPushButton::clicked, this, &MainWindow::on_pushButton_toggled, Qt::UniqueConnection);
 
     /* Progress bard */
     ui->progressBar->setMaximum(10);
@@ -38,9 +45,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_toggled(bool checked)
 {
+//    qDebug() << " qDebug(checked): " << checked;
     if((ui->spinBox->value())< 10){
-        ui->spinBox->setValue((ui->spinBox->value()+1));
-    } else {ui->spinBox->setValue(0);}
+        ui->spinBox->setValue((ui->spinBox->value())+1);
+    }else {ui->spinBox->setValue(0);}
 }
 
 void MainWindow::on_spinBox_valueChanged(int arg1)
@@ -54,4 +62,3 @@ void MainWindow::on_progressBar_valueChanged(int value)
         ui->radioButton_2->animateClick();
     }
 }
-
