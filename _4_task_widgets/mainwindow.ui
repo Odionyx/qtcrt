@@ -18,7 +18,7 @@
     <item row="1" column="1" colspan="2">
      <widget class="QPushButton" name="pushButton">
       <property name="text">
-       <string>Выполнить</string>
+       <string/>
       </property>
       <property name="checkable">
        <bool>true</bool>
@@ -41,60 +41,29 @@
        <item>
         <widget class="QGroupBox" name="groupBox_2">
          <property name="title">
-          <string>Таблица</string>
+          <string/>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
-           <widget class="QComboBox" name="comboBox">
-            <item>
-             <property name="text">
-              <string>Создать</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Добавить столбец</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Добавить строку</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Удалить столбец</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Удалить строку</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Удалить</string>
-             </property>
-            </item>
-           </widget>
+           <widget class="QComboBox" name="comboBox"/>
           </item>
           <item>
            <widget class="QGroupBox" name="groupBox">
             <property name="title">
-             <string>Соединение</string>
+             <string/>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_3">
              <item>
               <widget class="QRadioButton" name="radioButton">
                <property name="text">
-                <string>Вкл.</string>
+                <string/>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QRadioButton" name="radioButton_2">
                <property name="text">
-                <string>Выкл.</string>
+                <string/>
                </property>
               </widget>
              </item>
