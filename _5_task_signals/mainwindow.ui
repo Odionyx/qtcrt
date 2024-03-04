@@ -146,28 +146,12 @@
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>292</x>
-     <y>23</y>
+     <x>332</x>
+     <y>34</y>
     </hint>
     <hint type="destinationlabel">
-     <x>209</x>
-     <y>93</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pB_clear</sender>
-   <signal>released()</signal>
-   <receiver>l_time</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>351</x>
-     <y>31</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>350</x>
-     <y>92</y>
+     <x>236</x>
+     <y>101</y>
     </hint>
    </hints>
   </connection>
